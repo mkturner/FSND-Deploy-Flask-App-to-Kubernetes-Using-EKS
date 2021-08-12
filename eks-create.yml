@@ -1,0 +1,27 @@
+# Setup: Declare apiVersion & Kind
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+# Metadata
+metadata:
+  # Name the cluster
+  name: fswd-deploy-4
+  # Default region for resources created from file
+  region: us-east-2
+
+# Create a Node Group
+nodeGroups:
+  # name of node group
+  - name: deploy-4-ng
+    # inctance class
+    instanceType: t3.micro
+    # how many instances you'd like
+    desiredCapacity: 2
+    # Set Amazon Machine Image (which  OS to use)
+    # Using "EKS Kubernetes Worker AMI with AmazonLinux2 image"
+    ami: ami-00ebf99215a1ee45b
+    # Configure ssh, use existing key
+    ssh:
+      publicKeyName: fswd-deploy-4
+  
+
