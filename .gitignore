@@ -28,4 +28,7 @@ htmlcov/
 .envrc
 .direnv
 
+# Pyenv
+.python-version
+
 .github/**
