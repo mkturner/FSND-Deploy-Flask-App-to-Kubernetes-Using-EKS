@@ -9,7 +9,7 @@ Parameters:
   EksClusterName:
     Type: String
     Description: The name of the EKS cluster created
-    Default: simple-jwt-api
+    Default: fswd-jwt-api
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter the EKS cluster name
@@ -40,12 +40,12 @@ Parameters:
 
   GitHubUser:
     Type: String
-    Default: SudKul
+    Default: mkturner
     Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub username or organization
-
+  
   CodeBuildDockerImage:
     Type: String
     Default: aws/codebuild/standard:4.0
