@@ -32,7 +32,7 @@ phases:
         - echo $JWT_SECRET
         # Dynamically load secret into simple-jwt-api.yml,
         # basic find/replace with sed
-        - sed -i 's@JWT_SECRET_VALUE@'"$JWT_SECRET"'@' simple-jwt-api.yml
+        - sed -i 's@JWT_SECRET_VALUE@'"$JWT_SECRET"'@' simple_jwt_api.yml
   build:
     commands:
       - docker build --tag $REPOSITORY_URI:$TAG .
